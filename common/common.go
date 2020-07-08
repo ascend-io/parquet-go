@@ -315,13 +315,7 @@ func HeadToUpper(str string) string {
 	if ln <= 0 {
 		return str
 	}
-
-	c := str[0]
-	if (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') {
-		return strings.ToUpper(str[0:1]) + str[1:]
-	}
-	//handle non-alpha prefix such as "_"
-	return "P_" + str
+	return strings.ToUpper(str[0:1]) + str[1:]
 }
 
 func CmpIntBinary(as string, bs string, order string, signed bool) bool {
